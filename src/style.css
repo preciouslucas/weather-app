@@ -1,0 +1,150 @@
+h1,
+h2 {
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+}
+
+h3,
+h4 {
+  color: #738598;
+  font-family: "Manrope", sans-serif;
+}
+
+h1 {
+  margin-top: 48px;
+  font-size: 65px;
+  margin-bottom: 0;
+  color: #ea2c62;
+}
+
+h1 i {
+  color: #ea2c62;
+}
+
+h2 i {
+  color: #686d76;
+  font-size: 45px;
+  text-align: center;
+}
+
+h2 {
+  padding-top: 25px;
+  font-size: 30px;
+  color: #738598;
+}
+
+h3 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+  font-weight: lighter;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+h4 {
+  text-align: center;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 100;
+  padding-top: 12px;
+}
+
+.temperature {
+  text-align: center;
+  font-family: "Istok Web", sans-serif;
+}
+
+.border-right {
+  border-right: 1px solid #ebbba7 !important;
+}
+
+.border-left {
+  border-left: 1px solid #ebbba7 !important;
+}
+
+.input-group {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 0px;
+  position: relative;
+}
+
+.search-button {
+  padding: 0px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.btn-group-toggle {
+  position: relative;
+  opacity: 50%;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.button i {
+  font-weight: lighter;
+}
+
+.current-location-button i {
+  font-weight: lighter;
+}
+
+.weather-app {
+  background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+  border: 1.5px solid #68383e;
+  border-radius: 9px;
+  box-shadow: 6px 6px 3px 3px #68383e;
+  margin: 0 87px;
+  max-width: 800px;
+}
+
+form {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+form .fa-search {
+  position: relative;
+  opacity: 50%;
+  border-radius: 50px;
+}
+
+form .input-group {
+  border-radius: 600px;
+}
+
+input {
+  background-color: #e7f0fd;
+  border-radius: 4px;
+  opacity: 60%;
+}
+
+footer {
+  padding-top: 10px;
+  color: #738598;
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: "Manrope", sans-serif;
+}
+
+footer i {
+  font-size: 40px;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+}
+
+li {
+  color: #738598;
+  font-size: 22px;
+  font-weight: 100;
+  font-family: "Manrope", sans-serif;
+  height: 19px;
+  line-height: 1;
+  list-style: none;
+  padding-top: 20px;
+}
