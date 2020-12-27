@@ -1,13 +1,15 @@
+body {
+  font-family: "Manrope", sans-serif;
+}
+
 h1,
 h2 {
   text-align: center;
-  font-family: "Manrope", sans-serif;
 }
 
 h3,
 h4 {
   color: #738598;
-  font-family: "Manrope", sans-serif;
 }
 
 h1 {
@@ -103,6 +105,12 @@ h4 {
   max-width: 800px;
 }
 
+.weather-app-wrapper {
+  max-width: 850px;
+  margin: 30px auto;
+  text-align: center;
+}
+
 form {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -147,4 +155,8 @@ li {
   line-height: 1;
   list-style: none;
   padding-top: 20px;
+}
+
+small {
+  text-align: center;
 }
