@@ -13,6 +13,7 @@ let days = [
   "Friday",
   "Saturday"
 ];
+
 let day = days[now.getDay()];
 let months = [
   "January",
@@ -28,15 +29,16 @@ let months = [
   "November",
   "December"
 ];
+
 let month = months[now.getMonth()];
 h2.innerHTML = `${day}, ${date} ${month} ${year}, ${hours}:${minutes}`;
 
-//WEEK 5 Homework
+
 //Weather
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let city = response.data.name;
-  let message = `It is currently ${temperature}°C`;
+  let message = `It is currently ${temperature} °C`;
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
 
@@ -44,11 +46,11 @@ function showTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
   let descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = response.data.weather.description;
+  descriptionElement.innerHTML = response.data.weather[0].description;
 
   let h3 = document.querySelector("h3");
   h3.innerHTML = message;
-}
+  }
 
 function searchCity(city) {
   let apiKey = "a6d670173067336041caf358a0d04186";
