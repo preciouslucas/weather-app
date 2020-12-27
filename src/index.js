@@ -37,6 +37,15 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let city = response.data.name;
   let message = `It is currently ${temperature}°C`;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather.description;
+
   let h3 = document.querySelector("h3");
   h3.innerHTML = message;
 }
@@ -52,7 +61,7 @@ function handleSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#type-city");
   let h1 = document.querySelector("h1");
-  h1.innerHTML = `${searchInput.value}📍`;
+  h1.innerHTML = `${searchInput.value} <i class="fas fa-map-marker-alt"></i>`;
   searchCity(searchInput.value);
 }
 
