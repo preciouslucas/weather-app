@@ -39,6 +39,18 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let city = response.data.name;
   let message = `It is currently ${temperature} °C`;
+  let h3 = document.querySelector("h3");
+  h3.innerHTML = message;
+
+  let feelslikeElement = document.querySelector("#feels-like");
+  feelslikeElement.innerHTML = Math.round(response.data.main.feels_like);
+
+  let maxtempElement = document.querySelector("#max-temp");
+  maxtempElement.innerHTML = Math.round(response.data.main.temp_max);
+
+  let mintempElement = document.querySelector("#min-temp");
+  mintempElement.innerHTML = Math.round(response.data.main.temp_min);
+
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
 
@@ -48,8 +60,6 @@ function showTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
 
-  let h3 = document.querySelector("h3");
-  h3.innerHTML = message;
   }
 
 function searchCity(city) {
