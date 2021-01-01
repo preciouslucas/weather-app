@@ -7,10 +7,6 @@ h2 {
   text-align: center;
 }
 
-h3,
-h4 {
-  color: #738598;
-}
 
 h1 {
   margin-top: 48px;
@@ -23,37 +19,65 @@ h1 i {
   color: #ea2c62;
 }
 
-h2 i {
-  color: #686d76;
-  font-size: 40px;
-  text-align: center;
-}
-
 h2 {
-  padding-top: 25px;
-  font-size: 30px;
+  font-size: 20px;
   color: #738598;
 }
 
-h3 {
-  margin: 0 auto;
-  text-align: center;
-  font-size: 30px;
-  font-weight: lighter;
-  padding-top: 10px;
-  padding-bottom: 15px;
+form {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-h4 {
+form .fa-search {
+  position: relative;
+  opacity: 50%;
+  border-radius: 50px;
+}
+
+form .input-group {
+  border-radius: 600px;
+}
+
+input {
+  background-color: #e7f0fd;
+  border-radius: 4px;
+  opacity: 60%;
+}
+
+footer {
+  padding-top: 10px;
+  color: #738598;
   text-align: center;
-  padding: 0;
-  font-size: 18px;
+  padding-bottom: 10px;
+  font-family: "Manrope", sans-serif;
+}
+
+footer i {
+  font-size: 40px;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+}
+
+li {
+  color: #738598;
+  font-size: 20px;
   font-weight: 100;
-  padding-top: 12px;
+  font-family: "Manrope", sans-serif;
+  height: 19px;
+  line-height: 1;
+  list-style: none;
+  padding-top: 10px;
+  text-transform: capitalize;
+}
+
+small {
+  text-align: center;
 }
 
 .temperature {
   text-align: center;
+  font-size: 20px;
   font-family: "Istok Web", sans-serif;
 }
 
@@ -108,56 +132,5 @@ h4 {
 .weather-app-wrapper {
   max-width: 850px;
   margin: 30px auto;
-  text-align: center;
-}
-
-form {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-form .fa-search {
-  position: relative;
-  opacity: 50%;
-  border-radius: 50px;
-}
-
-form .input-group {
-  border-radius: 600px;
-}
-
-input {
-  background-color: #e7f0fd;
-  border-radius: 4px;
-  opacity: 60%;
-}
-
-footer {
-  padding-top: 10px;
-  color: #738598;
-  text-align: center;
-  padding-bottom: 10px;
-  font-family: "Manrope", sans-serif;
-}
-
-footer i {
-  font-size: 40px;
-  text-align: center;
-  font-family: "Manrope", sans-serif;
-}
-
-li {
-  color: #738598;
-  font-size: 22px;
-  font-weight: 100;
-  font-family: "Manrope", sans-serif;
-  height: 19px;
-  line-height: 1;
-  list-style: none;
-  padding-top: 20px;
-  text-transform: capitalize;
-}
-
-small {
   text-align: center;
 }
