@@ -76,7 +76,7 @@ function handleSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#type-city");
   let h1 = document.querySelector("h1");
-  h1.innerHTML = `${searchInput.value} <i class="fas fa-map-marker-alt"></i>`;
+  h1.innerHTML = `${searchInput.value}`;
   searchCity(searchInput.value);
 }
 
