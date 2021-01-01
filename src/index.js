@@ -36,11 +36,8 @@ h2.innerHTML = `Last updated: ${day}, ${date} ${month} ${year}, ${hours}:${minut
 
 //Weather
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let city = response.data.name;
-  let message = `It is currently ${temperature} °C`;
-  let h3 = document.querySelector("h3");
-  h3.innerHTML = message;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML =Math.round(response.data.main.temp);
 
   let feelslikeElement = document.querySelector("#feels-like");
   feelslikeElement.innerHTML = Math.round(response.data.main.feels_like);
