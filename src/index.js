@@ -31,7 +31,7 @@ let months = [
 ];
 
 let month = months[now.getMonth()];
-h2.innerHTML = `${day}, ${date} ${month} ${year}, ${hours}:${minutes}`;
+h2.innerHTML = `Last updated: ${day}, ${date} ${month} ${year}, ${hours}:${minutes}`;
 
 
 //Weather
