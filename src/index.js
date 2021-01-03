@@ -63,12 +63,33 @@ function showTemperature(response) {
   celsciusTemperature = response.data.main.temp;
   }
 
+ function showForecast(response) {
+   let forecastElement = document.querySelector("#forecast");
+   let forecast = response.data.list[0]
+   console.log(response.data.list[0]);
+
+   forecastElement.innerHTML = `<div class="col-2">
+        <h3>
+            19:00
+        </h3>
+        <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
+        <div class="weather-forecast-temperature">
+            <strong>${Math.round(forecast.main.temp_max)} °C</strong> ${Math.round(forecast.main.temp_min)} °C
+        </div>
+    </div>`;
+   
+ }
+
 function searchCity(city) {
   let apiKey = "a6d670173067336041caf358a0d04186";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
+  
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showForecast);
 }
+
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -119,3 +140,5 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+searchCity("London");
