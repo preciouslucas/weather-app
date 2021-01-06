@@ -113,6 +113,67 @@ function showTemperature(response) {
             <strong>${Math.round(forecast.main.temp_max)} °C</strong> ${Math.round(forecast.main.temp_min)} °C
         </div>
     </div>`;
+
+forecast = response.data.list[1];
+forecastElement.innerHTML +=
+   `<div class="col-2">
+        <h3>
+            ${formatHours(forecast.dt * 1000)}
+        </h3>
+        <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
+        <div class="weather-forecast-temperature">
+            <strong>${Math.round(forecast.main.temp_max)} °C</strong> ${Math.round(forecast.main.temp_min)} °C
+        </div>
+    </div>`;
+
+    forecast = response.data.list[2];
+forecastElement.innerHTML +=
+   `<div class="col-2">
+        <h3>
+            ${formatHours(forecast.dt * 1000)}
+        </h3>
+        <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
+        <div class="weather-forecast-temperature">
+            <strong>${Math.round(forecast.main.temp_max)} °C</strong> ${Math.round(forecast.main.temp_min)} °C
+        </div>
+    </div>`;
+
+    forecast = response.data.list[3];
+forecastElement.innerHTML +=
+   `<div class="col-2">
+        <h3>
+            ${formatHours(forecast.dt * 1000)}
+        </h3>
+        <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
+        <div class="weather-forecast-temperature">
+            <strong>${Math.round(forecast.main.temp_max)} °C</strong> ${Math.round(forecast.main.temp_min)} °C
+        </div>
+    </div>`;
+
+    forecast = response.data.list[4];
+forecastElement.innerHTML +=
+   `<div class="col-2">
+        <h3>
+            ${formatHours(forecast.dt * 1000)}
+        </h3>
+        <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
+        <div class="weather-forecast-temperature">
+            <strong>${Math.round(forecast.main.temp_max)} °C</strong> ${Math.round(forecast.main.temp_min)} °C
+        </div>
+    </div>`;
+
+    forecast = response.data.list[5];
+forecastElement.innerHTML +=
+   `<div class="col-2">
+        <h3>
+            ${formatHours(forecast.dt * 1000)}
+        </h3>
+        <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
+        <div class="weather-forecast-temperature">
+            <strong>${Math.round(forecast.main.temp_max)} °C</strong> ${Math.round(forecast.main.temp_min)} °C
+        </div>
+    </div>`;
+   
    
  }
 
