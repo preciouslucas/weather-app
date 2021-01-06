@@ -1,3 +1,26 @@
+
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${formatHours(timestamp)}`;
+}
+
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  return `${hours}:${minutes}`;
+}
+
+
 let now = new Date();
 let h2 = document.querySelector("h2");
 let date = now.getDate();
@@ -33,6 +56,19 @@ let months = [
 let month = months[now.getMonth()];
 h2.innerHTML = `Last updated: ${day}, ${date} ${month} ${year}, ${hours}:${minutes}`;
 
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
+}
 
 //Weather
 function showTemperature(response) {
@@ -70,7 +106,7 @@ function showTemperature(response) {
 
    forecastElement.innerHTML = `<div class="col-2">
         <h3>
-            19:00
+            ${formatHours(forecast.dt * 1000)}
         </h3>
         <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
         <div class="weather-forecast-temperature">
