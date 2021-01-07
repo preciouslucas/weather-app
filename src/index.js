@@ -1,26 +1,4 @@
 
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
-
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-  ];
-  let day = days[date.getDay()];
-  return `${day} ${formatHours(timestamp)}`;
-}
-
-function formatHours(timestamp) {
-  let date = new Date(timestamp);
-  return `${hours}:${minutes}`;
-}
-
-
 let now = new Date();
 let h2 = document.querySelector("h2");
 let date = now.getDate();
@@ -67,6 +45,11 @@ function formatHours(timestamp) {
     minutes = `0${minutes}`;
   }
 
+  return `${hours}:${minutes}`;
+}
+
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
   return `${hours}:${minutes}`;
 }
 
