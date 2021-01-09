@@ -106,6 +106,9 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
 
+  let h1 = document.querySelector("#city");
+  h1.innerHTML = response.data.name;
+
   celsciusTemperature = response.data.main.temp;
   }
 
@@ -145,15 +148,6 @@ function handleSubmit(event) {
   let h1 = document.querySelector("#city");
   h1.innerHTML = `${searchInput.value}`;
   searchCity(searchInput.value);
-
-  let apiKey = "a6d670173067336041caf358a0d04186";
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showTemperature);
-  
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showForecast);
-
 }
 
 let form = document.querySelector("#city-input");
